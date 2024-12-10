@@ -18,6 +18,8 @@ body{
     display: flex;
     flex-direction: column;
 
+    position: relative;
+
 }
 
 .headText{
@@ -40,7 +42,7 @@ body{
 
 }
 
-.addTask{
+.addBtn{
     width: 13rem;
     height: 3rem;
     border-radius: 17px;
@@ -50,12 +52,6 @@ body{
     color: whitesmoke;
     font-family: "Roboto";
     font-weight: 300;
-
-    
-
-    position: absolute;
-    left:40rem;
-    top:1.5px;
 
 }
 
@@ -68,4 +64,73 @@ body{
     text-align: left;
 }
 
+.projectStack{
+    margin-top: 2.5rem;
+    display: flex;
+    height: 100%;
 
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#addTask{
+    position: absolute;
+    left:40rem;
+    top:1.5px;
+}
+
+#addProject{
+
+    position: relative;
+    top: 50%;
+
+}
+
+.project{
+    background-color: whitesmoke;
+
+    margin-top: 1.75rem;
+    width: 70%;
+    height: 5%;
+
+    text-align: center;
+    font-family: "Joan";
+    font-size: 1.85rem;
+
+    border-radius: 10px;
+}
+
+.taskStack{
+    margin-top: 3rem;
+}
+
+.task{
+    display: flex;
+    background-color: #303036;
+    width: auto;
+    height: 2.3rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    /* justify-content: space-evenly; */
+}
+
+.taskName{
+    width: 43rem;
+    font-family: 'Inter';
+    font-size: 17px;
+    text-align: left;
+    color: #f5e2c8;
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+
+.taskStatus{
+    background-color: #50A563;
+    /* background-color: #FC5130;
+    background-color: #E2C807; */
+    width: 20%;
+    border-radius: 0px 10px 10px 0px;
+    
+}
