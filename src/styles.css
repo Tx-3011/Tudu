@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Joan&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:#F5E2C8;
+    display: flex;
+}
+
+.leftPanel{
+    width: 30%;
+    background-color: #303036;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headText{
+    height: 3rem;
+    background-color: #050401;
+    color: #FC5130;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.rightPanel{
+    margin-left: 6rem;
+    margin-top: 3rem;
+
+    position: relative;
+
+}
+
+.addTask{
+    width: 13rem;
+    height: 3rem;
+    border-radius: 17px;
+    border: none;
+    background: #623CEA;
+    font-size: 30px;
+    color: whitesmoke;
+    font-family: "Roboto";
+    font-weight: 300;
+
+    
+
+    position: absolute;
+    left:40rem;
+    top:1.5px;
+
+}
+
+.projectTitle{
+    color: #000;
+    text-align: center;
+    font-family: "Joan";
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: left;
+}
+
+
