@@ -17,7 +17,8 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/template.html"
+            template: "./src/template.html",
+            // favicon: path.resolve(__dirname, "images", "tudu.ico"),
         }),
     ],
 
@@ -28,7 +29,7 @@ module.exports = {
                 use:["style-loader","css-loader"],
             },
             {
-                test:/\.(png|svg|jpg|jpeg|gif)$/i,
+                test:/\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type:"asset/resource",
             },
         ],

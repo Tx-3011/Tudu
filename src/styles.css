@@ -134,3 +134,35 @@ body{
     border-radius: 0px 10px 10px 0px;
     
 }
+
+.projectDialog{
+    margin: auto;
+    border-radius: 17px;
+    border: #623CEA;
+
+    padding: 2rem;
+    
+
+    /* display: flex; */
+}
+
+.projectNameInput{
+    height: 3rem;
+    border-radius: 17px 0 0 17px;
+    border: 0px solid black;
+    background-color: #dccbb4;
+    width: 20rem;
+    padding: 5px;
+
+    margin-right: 0;
+
+    font-size: 1.5rem;
+}
+
+#pDialogSubmit{
+    border-radius: 0 17px 17px 0;
+    width: 5rem;
+    height: 58px;
+
+    margin-left: 0;
+}
