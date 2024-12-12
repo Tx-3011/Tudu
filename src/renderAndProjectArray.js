@@ -14,10 +14,31 @@ function renderProjects(){
         pTile.addEventListener('click',()=>{
             taskTitle.textContent = `${p.projectName} :`
             currentProject = p;
+            renderTasks();
         })
 
         projectStack.append(pTile);
     })
 }
 
-export {projectArray,renderProjects,currentProject}
+function renderTasks(){
+    taskStack.textContent = ` `;
+    (currentProject.tasks).forEach(t => {
+        const newTaskDiv = document.createElement("div");
+        const taskName = document.createElement("div");
+        const taskStatus = document.createElement("div");
+
+        newTaskDiv.className = "task"
+        taskName.className = "taskName"
+        taskStatus.className = "taskStatus"
+
+        taskName.textContent = t.taskName;
+
+        newTaskDiv.append(taskName);
+        newTaskDiv.append(taskStatus);
+        taskStack.append(newTaskDiv);
+        
+    });
+}
+
+export {projectArray,renderProjects,currentProject,renderTasks}
