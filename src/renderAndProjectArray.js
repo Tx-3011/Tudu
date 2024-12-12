@@ -21,6 +21,10 @@ function renderProjects(){
     })
 }
 
+function setCurrentProject(p){
+    currentProject = p;
+}
+
 function renderTasks(){
     taskStack.textContent = ` `;
     (currentProject.tasks).forEach(t => {
@@ -41,4 +45,4 @@ function renderTasks(){
     });
 }
 
-export {projectArray,renderProjects,currentProject,renderTasks}
+export {projectArray,renderProjects,currentProject,renderTasks,setCurrentProject}

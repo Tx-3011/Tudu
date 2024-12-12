@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="tudu.svg">
+    <link rel="icon" href="./images/tudu.png">
+
+
     <title>TuDu</title>
 <script defer src="main.js"></script></head>
 <body>
@@ -12,8 +14,11 @@
         <h1 class="headText" id="headText">
             T u D u
         </h1>
+        <button class="addBtn" id="addProject">
+            Add Project
+        </button>
         <div class="projectStack" id="projectStack">
-            <div class="project">
+            <!-- <div class="project">
                 hello
             </div>
             <div class="project">
@@ -24,14 +29,12 @@
             </div>
             <div class="project">
                 hello
-            </div>
+            </div> -->
 
-            <button class="addBtn" id="addProject">
-                Add Project
-            </button>
-
+            
         </div>
 
+        
     </div>
 
     <div class="rightPanel" id="rightPanel">
@@ -50,7 +53,7 @@
 
         <div class="taskStack" id="taskStack">
 
-            <div class="task">
+            <!-- <div class="task">
                 <div class="taskName"> Walk the dog in park </div>
                 <div class="taskStatus"> </div>
             </div>
@@ -64,12 +67,35 @@
                 <div class="taskName"> Walk the dog in park </div>
                 <div class="taskStatus"> </div>
             </div>
+
+            <div class="task">
+                <div class="taskName"> Wal </div>
+                <div class="taskStatus"> </div>
+            </div> -->
 
         </div>
 
 
 
     </div>
+
+    <dialog class="taskDialog" id="taskDialog">
+        <form>
+            <label for="taskNameInput">Enter Task : </label>
+            <input type="text" id="taskNameInput" class="taskNameInput">
+            <button type="submit" class="addBtn" id="taskSubmitBtn">Add</button>
+        </form>
+    </dialog>
+
+    <dialog class="projectDialog" id="projectDialog">
+
+        <form>
+
+            <input type="text" name="" id="projectNameInput" class="projectNameInput">
+            <button type="submit" class="addBtn" id="pDialogSubmit">Add</button> 
+
+        </form>
+    </dialog>
     
 </body>
 </html>
