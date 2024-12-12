@@ -1,5 +1,6 @@
 const taskTitle = document.querySelector("#projectTitle");
 let projectArray = [];
+let currentProject;
 
 function renderProjects(){
 
@@ -12,10 +13,11 @@ function renderProjects(){
 
         pTile.addEventListener('click',()=>{
             taskTitle.textContent = `${p.projectName} :`
+            currentProject = p;
         })
 
         projectStack.append(pTile);
     })
 }
 
-export {projectArray,renderProjects}
+export {projectArray,renderProjects,currentProject}
