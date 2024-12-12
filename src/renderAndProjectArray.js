@@ -38,9 +38,37 @@ function renderTasks(){
 
         taskName.textContent = t.taskName;
 
+        if(t.priority == 1){
+            taskName.style.color = "#E2C807"
+        }
+
+        function renderStatus(){
+
+            if(t.status == 0){
+                taskStatus.style.backgroundColor = "#FC5130"
+            }else if(t.status == 1){
+                taskStatus.style.backgroundColor = "#50A563"
+            }
+
+        }
+
+        renderStatus();
+
+        taskStatus.addEventListener('click',()=>{
+
+            if(t.status == 1){
+                t.status = 0;
+            }else if(t.status == 0){
+                t.status = 1;
+            }
+
+            renderStatus();
+        })
+
         newTaskDiv.append(taskName);
         newTaskDiv.append(taskStatus);
         taskStack.append(newTaskDiv);
+
         
     });
 }

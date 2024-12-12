@@ -30,5 +30,7 @@ function createTask(){
 
 function task(taskName){
     this.taskName = taskName;
+    this.status = 0;
+    this.priority = 0;
 }
 export{createTask};

@@ -129,8 +129,8 @@ body{
 
 
 .taskStatus{
-    background-color: #50A563;
-    /* background-color: #FC5130;
+    background-color: #FC5130;
+    /* background-color: #50A563;
     background-color: #E2C807; */
     width: 20%;
     border-radius: 0px 10px 10px 0px;
@@ -168,3 +168,4 @@ body{
 
     margin-left: 0;
 }
+
