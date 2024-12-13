@@ -1,9 +1,10 @@
-import { currentProject } from "./renderAndProjectArray";
+import { currentProject,projectArray,saveLocal } from "./renderAndProjectArray";
 import { renderTasks } from "./renderAndProjectArray";
 const taskInput = document.querySelector("#taskNameInput")
 const addTaskBtn = document.querySelector("#taskSubmitBtn");
 const dialog = document.querySelector("#taskDialog");
 const taskStack = document.querySelector("#taskStack");
+const cbox = document.querySelector("#priority");
 
 
 function createTask(){
@@ -14,11 +15,17 @@ function createTask(){
         
         event.preventDefault();
         let taskName = taskInput.value;
-
         let newTask = new task(taskName);
+        if(cbox.checked){
+            newTask.priority = 1;
+        }
+
         (currentProject.tasks).push(newTask)
 
+
+
         renderTasks();
+        saveLocal(projectArray)
 
         addTaskBtn.removeEventListener('click',taskCreation);
         dialog.close();

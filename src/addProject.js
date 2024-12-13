@@ -5,7 +5,7 @@ const pTextBox = document.querySelector("#projectNameInput")
 const taskTitle = document.querySelector("#projectTitle");
 
 
-import { projectArray,renderProjects,currentProject,setCurrentProject,renderTasks } from "./renderAndProjectArray";
+import { projectArray,renderProjects,currentProject,setCurrentProject,renderTasks,saveLocal } from "./renderAndProjectArray";
 
 function createProject(){
 
@@ -21,8 +21,9 @@ function createProject(){
     
         let newProject = new project(pName);
         projectArray.push(newProject);
+        
         setCurrentProject(newProject);
-    
+        saveLocal(projectArray);
         console.log(projectArray);
 
         taskTitle.textContent = `${newProject.projectName} :`

@@ -1,6 +1,6 @@
 import "./styles.css"
 import { createProject } from "./addProject";
-import { projectArray,renderProjects } from "./renderAndProjectArray";
+import { setProjectArray,renderProjects,renderTasks,getLocal } from "./renderAndProjectArray";
 import { createTask } from "./addTask";
 
 
@@ -12,9 +12,13 @@ const addTaskbtn = document.querySelector("#addTask")
 
 const dialog = document.querySelector("#projectDialog");
 
+getLocal();
+
+
 
 addProjectbtn.addEventListener("click",()=>{
     createProject();
+    addTaskbtn.style.display = 'block'
 })
 
 

@@ -1,4 +1,6 @@
 const taskTitle = document.querySelector("#projectTitle");
+const addTaskbtn = document.querySelector("#addTask")
+
 let projectArray = [];
 let currentProject;
 
@@ -14,6 +16,7 @@ function renderProjects(){
         pTile.addEventListener('click',()=>{
             taskTitle.textContent = `${p.projectName} :`
             currentProject = p;
+            addTaskbtn.style.display = 'block'
             renderTasks();
         })
 
@@ -23,6 +26,10 @@ function renderProjects(){
 
 function setCurrentProject(p){
     currentProject = p;
+}
+
+function setProjectArray(p){
+    projectArray = p;
 }
 
 function renderTasks(){
@@ -62,6 +69,9 @@ function renderTasks(){
                 t.status = 1;
             }
 
+            saveLocal(projectArray);
+
+            // localStorage.setItem(saved,projectArray);
             renderStatus();
         })
 
@@ -73,4 +83,15 @@ function renderTasks(){
     });
 }
 
-export {projectArray,renderProjects,currentProject,renderTasks,setCurrentProject}
+function saveLocal(projectArray){
+    localStorage.setItem('saved',JSON.stringify(projectArray));
+}
+
+function getLocal(){
+    if(localStorage.getItem('saved')){
+        projectArray = JSON.parse(localStorage.getItem('saved'))
+        renderProjects();
+    }
+}
+
+export {projectArray,renderProjects,currentProject,renderTasks,setCurrentProject,saveLocal,getLocal,setProjectArray}

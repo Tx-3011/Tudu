@@ -78,6 +78,8 @@ body{
     position: absolute;
     left:40rem;
     top:1.5px;
+
+    display: none;
 }
 
 #addProject{
