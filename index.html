@@ -53,25 +53,44 @@
 
         <div class="taskStack" id="taskStack">
 
-            <!-- <div class="task">
-                <div class="taskName"> Walk the dog in park </div>
-                <div class="taskStatus"> </div>
-            </div>
+            <!-- <div class="fullTask">
 
-            <div class="task">
-                <div class="taskName"> Walk the dog in park </div>
-                <div class="taskStatus"> </div>
+                <div class="task">
+                    <div class="taskName"> Walk the dog in park </div>
+                    <div class="taskStatus"> </div>
+                </div>
+                <div class="delete" id="delete"></div>
+                
             </div>
+            <div class="fullTask">
 
-            <div class="task">
-                <div class="taskName"> Walk the dog in park </div>
-                <div class="taskStatus"> </div>
+                <div class="task">
+                    <div class="taskName"> Walk the dog in park </div>
+                    <div class="taskStatus"> </div>
+                </div>
+                <div class="delete" id="delete"></div>
+                
             </div>
+            <div class="fullTask">
 
-            <div class="task">
-                <div class="taskName"> Wal </div>
-                <div class="taskStatus"> </div>
-            </div> -->
+                <div class="task">
+                    <div class="taskName"> Walk the dog in park </div>
+                    <div class="taskStatus"> </div>
+                </div>
+                <div class="delete" id="delete"></div>
+                
+            </div>
+            <div class="fullTask">
+
+                <div class="task">
+                    <div class="taskName"> Walk the dog in park </div>
+                    <div class="taskStatus"> </div>
+                </div>
+                <div class="delete" id="delete"></div>
+                
+            </div>
+             -->
+
 
         </div>
 
@@ -79,17 +98,22 @@
 
     </div>
 
-    <dialog class="projectDialog" id="taskDialog">
-        <form>
-            <label for="taskNameInput">Enter Task : </label>
+    <dialog class="Dialog" id="taskDialog">
+
+        <form class="taskForm">
+            <label for="taskNameInput" class="taskLabel">Enter Task : </label>
             <input type="text" id="taskNameInput" class="taskNameInput">
             <button type="submit" class="addBtn" id="taskSubmitBtn">Add</button>
-            <label for="priority">Important? </label>
-            <input type="checkbox" value="yes" id="priority" class="priority">
+            <div class="priorityDiv" id="priorityDiv">
+                <label for="priority" class="priorityLabel">Important? </label>
+                <input type="checkbox" value="yes" id="priority" class="priority">
+
+            </div>
+
         </form>
     </dialog>
 
-    <dialog class="projectDialog" id="projectDialog">
+    <dialog class="Dialog" id="projectDialog">
 
         <form>
 
