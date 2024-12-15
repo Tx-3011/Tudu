@@ -1,5 +1,7 @@
 const taskTitle = document.querySelector("#projectTitle");
 const addTaskbtn = document.querySelector("#addTask")
+const dialog = document.querySelector("#projectDialog");
+
 
 let projectArray = [];
 let currentProject;
@@ -35,6 +37,13 @@ function setProjectArray(p){
 function renderTasks(){
     taskStack.textContent = ` `;
     (currentProject.tasks).forEach(t => {
+
+        const fullTask = document.createElement("div");
+        fullTask.className = "fullTask"
+
+        const deleteBtn = document.createElement("div");
+        deleteBtn.className = "delete"
+
         const newTaskDiv = document.createElement("div");
         const taskName = document.createElement("div");
         const taskStatus = document.createElement("div");
@@ -75,9 +84,21 @@ function renderTasks(){
             renderStatus();
         })
 
+        deleteBtn.addEventListener('click',()=>{
+            const deleteAtIndex = (currentProject.tasks).indexOf(t);
+            (currentProject.tasks).splice(deleteAtIndex,1);
+            renderTasks()
+            saveLocal(projectArray);
+
+        })
+
         newTaskDiv.append(taskName);
         newTaskDiv.append(taskStatus);
-        taskStack.append(newTaskDiv);
+
+        fullTask.append(newTaskDiv);
+        fullTask.append(deleteBtn);
+
+        taskStack.append(fullTask);
 
         
     });
@@ -91,6 +112,9 @@ function getLocal(){
     if(localStorage.getItem('saved')){
         projectArray = JSON.parse(localStorage.getItem('saved'))
         renderProjects();
+        return true
+    }else{
+        return false
     }
 }
 

@@ -139,7 +139,7 @@ body{
     
 }
 
-.projectDialog{
+.Dialog{
     margin: auto;
     border-radius: 17px;
     border: #623CEA;
@@ -171,3 +171,77 @@ body{
     margin-left: 0;
 }
 
+/* #delete{
+    background-image: url("./images/trash.svg");
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+    background-color: #F5E2C8;
+    background-repeat: no-repeat;
+} */
+
+.delete{
+    background-image: url("./images/trash.svg");
+    height: 33.8px;
+    width: 36.8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 1rem;
+    background-position: center;
+}
+.fullTask{
+    display: flex;
+    /* flex-direction: row-reverse; */
+}
+
+#taskDialog{
+
+    width: 25rem;
+
+}
+
+.taskForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#taskSubmitBtn{
+    width: 6rem;
+    height: 2rem;
+    font-size: 1.4rem;
+
+}
+
+.taskNameInput,
+.submit,
+.priorityDiv{
+    margin: 1rem;
+}
+
+.taskLabel{
+    font-family: 'Joan';
+    margin-bottom: 0;
+
+    font-size: 18px;
+}
+
+.taskNameInput{
+    height: 1.5rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px;
+
+    font-size: 18px;
+    width: 20rem;
+}
+
+.priorityDiv{
+    display: flex;
+
+}
+
+.priority{
+    margin-left: 8px;
+}

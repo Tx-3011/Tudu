@@ -12,7 +12,13 @@ const addTaskbtn = document.querySelector("#addTask")
 
 const dialog = document.querySelector("#projectDialog");
 
-getLocal();
+let isNotEmpty = getLocal();
+
+if(!isNotEmpty){
+    createProject()
+    addTaskbtn.style.display = 'block'
+
+}
 
 
 

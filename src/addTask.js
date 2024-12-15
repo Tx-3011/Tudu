@@ -9,10 +9,14 @@ const cbox = document.querySelector("#priority");
 
 function createTask(){
 
-    dialog.showModal();
+    if(currentProject){     
+        dialog.showModal();
+    }else{
+        alert("Cannot create a Task without selecting a Project")
+    }
 
     function taskCreation(){
-        
+
         event.preventDefault();
         let taskName = taskInput.value;
         let newTask = new task(taskName);
@@ -29,6 +33,8 @@ function createTask(){
 
         addTaskBtn.removeEventListener('click',taskCreation);
         dialog.close();
+
+        
     }
     
     addTaskBtn.addEventListener('click',taskCreation)
