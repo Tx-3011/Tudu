@@ -45,7 +45,7 @@ body{
 .addBtn{
     width: 13rem;
     height: 3rem;
-    border-radius: 17px;
+    border-radius: 6px;
     border: none;
     background: #623CEA;
     font-size: 30px;
@@ -102,7 +102,7 @@ body{
     font-family: "Joan";
     font-size: 1.85rem;
 
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .taskStack{
@@ -122,11 +122,14 @@ body{
 .taskName{
     width: 43rem;
     font-family: 'Inter';
-    font-size: 17px;
+    font-size: 14px;
     text-align: left;
     color: #f5e2c8;
     padding: 0.5rem;
     padding-left: 1rem;
+    
+    display: flex;
+    align-items: center;
 }
 
 
@@ -141,7 +144,7 @@ body{
 
 .Dialog{
     margin: auto;
-    border-radius: 17px;
+    border-radius: 6px;
     border: #623CEA;
 
     padding: 2rem;
@@ -152,7 +155,7 @@ body{
 
 .projectNameInput{
     height: 3rem;
-    border-radius: 17px 0 0 17px;
+    border-radius: 6px 0 0 6px;
     border: 0px solid black;
     background-color: #dccbb4;
     width: 20rem;
@@ -164,7 +167,7 @@ body{
 }
 
 #pDialogSubmit{
-    border-radius: 0 17px 17px 0;
+    border-radius: 0 6px 6px 0;
     width: 5rem;
     height: 58px;
 
