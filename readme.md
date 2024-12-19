@@ -2,6 +2,11 @@
 
 A simple and efficient to-do list application that organizes tasks into projects. This app enables users to manage multiple projects, each containing its own set of to-do tasks, with features for task prioritization and status tracking.
 
+
+![image](https://github.com/user-attachments/assets/a98943d5-b16d-45ec-b2dc-42a52e75c69c)
+
+
+
 ## Features
 
 - **Project Management**: Create, view, and manage multiple projects.
